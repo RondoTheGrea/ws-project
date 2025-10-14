@@ -30,7 +30,7 @@ body {
 }
 
 .hero-content h1 {
-    font-size: clamp(3em, 8vw, 6rem);
+    font-size: 6rem;
     font-weight: 200;
     letter-spacing: 0.2em;
     margin-bottom: 2rem;
@@ -52,7 +52,7 @@ body {
 }
 
 .hero-subtitle {
-    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-size: 1.5rem;
     font-weight: 300;
     letter-spacing: 0.1em;
     max-width: 600px;
@@ -70,7 +70,7 @@ body {
 }
 
 .gallery-title {
-    font-size: clamp(1.875rem, 4vw, 2.25rem);
+    font-size: 2.4rem;
     font-weight: 200;
     text-align: center;
     letter-spacing: 0.15rem;
@@ -137,14 +137,14 @@ body {
 }
 
 .about-text h2{
-    font-size: clamp(1.875rem, 4vw, 2.5rem);
+    font-size: 2.5rem;
     font-weight: 200;
     letter-spacing: 0.15em;
     margin-bottom: 1rem;
 }
 
 .about-text .divider {
-    margin-left: 0;  /* Remove auto centering */
+    margin-left: 0;  
     margin-bottom: 2rem;
 }
 
@@ -156,31 +156,317 @@ body {
 }
 
 .stats {
-    display: flex;     /* Arrange items in a row */
-    gap: 50px;         /* 50px space between each stat */
-    margin-top: 2rem;  /* Space above stats */
+    display: flex;   
+    gap: 50px;       
+    margin-top: 2rem;
 }
 
-/* The big number in each stat */
+
 .stat-number {
-    font-size: 2.25rem;    /* Big number (slightly smaller for better proportion) */
-    font-weight: 200;      /* Extralight weight */
-    color: #f59e0b;        /* Gold color */
-    margin-bottom: 0.5rem; /* Space below number */
+    font-size: 2.25rem;   
+    font-weight: 200;     
+    color: #f59e0b;      
+    margin-bottom: 0.5rem;
 }
 
-/* The label under each stat number */
+
 .stat-label {
-    font-size: 0.875rem;  /* Smaller text */
-    color: #6b7280;       /* Gray color */
+    font-size: 0.875rem;
+    color: #6b7280;    
     letter-spacing: 0.05em;
 }
 
 .about-image img {
-    width: 100%;           /* Image fills its container */
-    height: auto;          /* Height adjusts automatically to maintain ratio */
-    border-radius: 8px;    /* Rounded corners */
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+    width: 100%;           
+    height: auto;          
+    border-radius: 8px;    
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);  
 }
 
+
+
+
+
+
+
+
+.testimonial-section {
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-title{
+    font-size: 2.3rem;
+    font-weight: 200;
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+.testimonial-card {
+    background-color: rgba(249, 250, 251, 0.167);
+    padding: 2.5rem 2rem 2rem 2rem;  /* top right bottom left */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    border-radius: 0.5rem;
+}
+
+.stars::before {
+    margin-bottom: 1.25rem;
+    content: '★★★★★';
+    color: #fbbf24;
+    font-size: 1.2rem;
+    letter-spacing: .30rem;
+}
+
+.testimonial-text{
+    color: #374151;
+    margin-bottom: 1.75rem;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.8;
+    letter-spacing: 0.025em;
+}
+
+.testimonial-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial-profile img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(251, 191, 36, 0.2);
+}
+
+.author-name {
+    font-weight: 400;      
+    letter-spacing: 0.025em;
+    margin-bottom: 0.25rem;
+}
+
+
+.author-location {
+    font-size: 0.875rem;
+    color: #6b7280;    
+    letter-spacing: 0.025em;
+}
+
+
+
+
+
+
+
+.feature-section {
+    padding: 100px 0;
+    background-color: white;
+}
+
+.feature-title {
+    font-size: 2.5rem;
+    font-weight: 200;
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.feature-item {
+    text-align: center;
+}
+
+.feature-icon {
+    width: 5rem;
+    height: 5rem;
+    background-color: rgba(249, 250, 251, 1);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 1.5rem;
+
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.location-section {
+    height: 100vh;
+    padding: 100px 0;
+    background-color: rgba(249, 250, 251, 0.7);;
+
+    display: flex;
+    align-items: center;
+}
+
+.location-section container {
+    max-width: 12800px;
+    padding: 0 3rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.location-grid {
+    display: grid;
+    grid-template-columns: 50fr 50fr;
+    gap: 2rem;
+    height: 100%;
+    max-height: calc(100vh - 160px);
+}
+
+.branches-list {
+    background-color: white;        /* White background */
+    border-radius: 1rem;            /* 16px rounded corners */
+    padding: 2rem;                  /* 32px padding (reduced for fit) */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);  /* Professional shadow */
+    
+    display: flex;                  /* Flexbox for vertical layout */
+    flex-direction: column;         /* Stack vertically */
+    justify-content: space-between; /* Space branches evenly */
+    overflow-y: auto;               /* Allow scroll if needed */
+}
+
+.section-title {
+    font-size: clamp(1.875rem, 4vw, 2.25rem); /* Responsive heading size */
+    font-weight: 200;        /* Extralight weight */
+    text-align: center;      /* Center the text */
+    letter-spacing: 0.15em;  /* Space between letters */
+    margin-bottom: 0.75rem;  /* Small space below */
+}
+
+.branches-list .section-title {
+    text-align: left;               /* Left-aligned */
+    font-size: 2rem;                /* Slightly smaller (32px) */
+    margin-bottom: 0.5rem;          /* Small space below */
+}
+
+/* Divider under title */
+.branches-list .title-divider {
+    margin-left: 0;                 /* Align left */
+    margin-bottom: 1.5rem;          /* 24px space below (reduced) */
+}
+
+.branch-item {
+    padding: 1.25rem;               /* 20px padding for better spacing */
+    
+    /* Elegant gradient background */
+    background: linear-gradient(135deg, 
+        rgba(249, 250, 251, 1) 0%,     /* Light gray top-left */
+        rgba(255, 255, 255, 1) 100%    /* White bottom-right */
+    );
+    
+    border-radius: 0.875rem;        /* 14px rounded corners - more elegant */
+    
+    /* Enhanced border with subtle gold accent */
+    border: 2px solid rgba(251, 191, 36, 0.2);  /* Stronger gold border */
+    
+    /* Professional shadow for depth */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08),    /* Main shadow */
+                0 1px 3px rgba(0, 0, 0, 0.05);     /* Subtle top shadow */
+    
+    /* Gold accent bar on the left */
+    border-left: 4px solid #fbbf24;  /* Prominent gold left border */
+}
+
+/* Branch header - name and tag in one line */
+.branch-header {
+    display: flex;                  /* Horizontal layout */
+    align-items: center;            /* Center vertically */
+    gap: 0.625rem;                  /* 10px space between (compact) */
+    margin-bottom: 0.5rem;          /* 8px space below (compact) */
+}
+
+/* Branch name - compact size */
+.branch-name {
+    font-size: 1.125rem;            /* 18px - compact for fit */
+    font-weight: 300;               /* Light weight */
+    letter-spacing: 0.05em;
+    margin: 0;
+    color: #1f2937;                 /* Dark text */
+}
+
+/* "MAIN" tag - gold pill badge */
+.branch-tag {
+    background-color: #fbbf24;      /* Bright gold */
+    color: #1f2937;                 /* Dark text */
+    padding: 0.15rem 0.5rem;        /* 2.4px top/bottom, 8px left/right (compact) */
+    border-radius: 9999px;          /* Fully rounded */
+    font-size: 0.625rem;            /* 10px - compact */
+    font-weight: 700;               /* Extra bold */
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* Branch address - compact */
+.branch-address {
+    color: #374151;                 /* Dark gray */
+    font-size: 0.875rem;            /* 14px (compact) */
+    margin-bottom: 0.5rem;          /* 8px space below (compact) */
+    line-height: 1.4;               /* Tighter line height */
+    letter-spacing: 0.015em;
+}
+
+/* Branch contact info - inline with icons */
+.branch-info {
+    display: flex;                  /* Horizontal layout */
+    flex-wrap: wrap;                /* Wrap if needed */
+    gap: 1rem;                      /* 16px space between items (compact) */
+    padding-top: 0.5rem;            /* 8px space above (compact) */
+    border-top: 1px solid rgba(251, 191, 36, 0.15);  /* Gold divider */
+}
+
+/* Each contact item */
+.branch-info p {
+    color: #6b7280;                 /* Medium gray */
+    font-size: 0.8125rem;           /* 13px (compact) */
+    margin: 0;                      /* No margin */
+    letter-spacing: 0.025em;
+}
+
+/* RIGHT SIDE: Map fills remaining space */
+.location-map {
+    height: 100%;                   /* Fill full height of grid */
+    border-radius: 1rem;            /* 16px rounded corners */
+    overflow: hidden;               /* Clip to rounded corners */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);  /* Strong shadow */
+    position: relative;             /* For overlays if needed */
+}
+
+/* The map image fills container */
+.location-map img {
+    width: 100%;                    /* Full width */
+    height: 100%;                   /* Full height */
+    object-fit: cover;              /* Cover without distortion */
+}
 
