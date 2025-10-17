@@ -323,150 +323,298 @@ body {
 
 .location-section {
     height: 100vh;
-    padding: 100px 0;
-    background-color: rgba(249, 250, 251, 0.7);;
-
+    padding: 80px 0;
+    background-color: #f9fafb;
+    
     display: flex;
     align-items: center;
 }
 
-.location-section container {
-    max-width: 12800px;
-    padding: 0 3rem;
-    margin: 0 auto;
-    width: 100%;
-}
-
 .location-grid {
     display: grid;
-    grid-template-columns: 50fr 50fr;
+    grid-template-columns: 45fr 55fr;
     gap: 2rem;
-    height: 100%;
     max-height: calc(100vh - 160px);
 }
 
 .branches-list {
-    background-color: white;        /* White background */
-    border-radius: 1rem;            /* 16px rounded corners */
-    padding: 2rem;                  /* 32px padding (reduced for fit) */
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);  /* Professional shadow */
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
     
-    display: flex;                  /* Flexbox for vertical layout */
-    flex-direction: column;         /* Stack vertically */
-    justify-content: space-between; /* Space branches evenly */
-    overflow-y: auto;               /* Allow scroll if needed */
-}
-
-.section-title {
-    font-size: clamp(1.875rem, 4vw, 2.25rem); /* Responsive heading size */
-    font-weight: 200;        /* Extralight weight */
-    text-align: center;      /* Center the text */
-    letter-spacing: 0.15em;  /* Space between letters */
-    margin-bottom: 0.75rem;  /* Small space below */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .branches-list .section-title {
-    text-align: left;               /* Left-aligned */
-    font-size: 2rem;                /* Slightly smaller (32px) */
-    margin-bottom: 0.5rem;          /* Small space below */
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 200;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
 }
 
-/* Divider under title */
 .branches-list .title-divider {
-    margin-left: 0;                 /* Align left */
-    margin-bottom: 1.5rem;          /* 24px space below (reduced) */
+    margin-left: 0;
+    margin-bottom: 1.5rem;
 }
 
 .branch-item {
-    padding: 1.25rem;               /* 20px padding for better spacing */
-    
-    /* Elegant gradient background */
-    background: linear-gradient(135deg, 
-        rgba(249, 250, 251, 1) 0%,     /* Light gray top-left */
-        rgba(255, 255, 255, 1) 100%    /* White bottom-right */
-    );
-    
-    border-radius: 0.875rem;        /* 14px rounded corners - more elegant */
-    
-    /* Enhanced border with subtle gold accent */
-    border: 2px solid rgba(251, 191, 36, 0.2);  /* Stronger gold border */
-    
-    /* Professional shadow for depth */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08),    /* Main shadow */
-                0 1px 3px rgba(0, 0, 0, 0.05);     /* Subtle top shadow */
-    
-    /* Gold accent bar on the left */
-    border-left: 4px solid #fbbf24;  /* Prominent gold left border */
+    padding: 1.25rem;
+    background: white;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    border-left: 4px solid #fbbf24;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-/* Branch header - name and tag in one line */
 .branch-header {
-    display: flex;                  /* Horizontal layout */
-    align-items: center;            /* Center vertically */
-    gap: 0.625rem;                  /* 10px space between (compact) */
-    margin-bottom: 0.5rem;          /* 8px space below (compact) */
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    margin-bottom: 0.5rem;
 }
 
-/* Branch name - compact size */
 .branch-name {
-    font-size: 1.125rem;            /* 18px - compact for fit */
-    font-weight: 300;               /* Light weight */
+    font-size: 1.125rem;
+    font-weight: 300;
     letter-spacing: 0.05em;
     margin: 0;
-    color: #1f2937;                 /* Dark text */
+    color: #1f2937;
 }
 
-/* "MAIN" tag - gold pill badge */
 .branch-tag {
-    background-color: #fbbf24;      /* Bright gold */
-    color: #1f2937;                 /* Dark text */
-    padding: 0.15rem 0.5rem;        /* 2.4px top/bottom, 8px left/right (compact) */
-    border-radius: 9999px;          /* Fully rounded */
-    font-size: 0.625rem;            /* 10px - compact */
-    font-weight: 700;               /* Extra bold */
+    background-color: #fbbf24;
+    color: #1f2937;
+    padding: 0.15rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.625rem;
+    font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
 
-/* Branch address - compact */
 .branch-address {
-    color: #374151;                 /* Dark gray */
-    font-size: 0.875rem;            /* 14px (compact) */
-    margin-bottom: 0.5rem;          /* 8px space below (compact) */
-    line-height: 1.4;               /* Tighter line height */
+    color: #374151;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
     letter-spacing: 0.015em;
 }
 
-/* Branch contact info - inline with icons */
 .branch-info {
-    display: flex;                  /* Horizontal layout */
-    flex-wrap: wrap;                /* Wrap if needed */
-    gap: 1rem;                      /* 16px space between items (compact) */
-    padding-top: 0.5rem;            /* 8px space above (compact) */
-    border-top: 1px solid rgba(251, 191, 36, 0.15);  /* Gold divider */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(251, 191, 36, 0.15);
 }
 
-/* Each contact item */
 .branch-info p {
-    color: #6b7280;                 /* Medium gray */
-    font-size: 0.8125rem;           /* 13px (compact) */
-    margin: 0;                      /* No margin */
+    color: #6b7280;
+    font-size: 0.8125rem;
+    margin: 0;
     letter-spacing: 0.025em;
 }
 
-/* RIGHT SIDE: Map fills remaining space */
 .location-map {
-    height: 100%;                   /* Fill full height of grid */
-    border-radius: 1rem;            /* 16px rounded corners */
-    overflow: hidden;               /* Clip to rounded corners */
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);  /* Strong shadow */
-    position: relative;             /* For overlays if needed */
+    height: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* The map image fills container */
 .location-map img {
-    width: 100%;                    /* Full width */
-    height: 100%;                   /* Full height */
-    object-fit: cover;              /* Cover without distortion */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
+.accomodation-section {
+    padding: 100px 0;
+    background-color: white;
+}
+
+.accomodation-title {
+    font-size: 2.5rem;
+    font-weight: 200;
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.accomodation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.room-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-8px);
+    box-shadow:  0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.room-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.room-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.price-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    background-color: #fbbf24;
+    color: black;
+
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+}
+
+.room-content {
+    padding: 2rem;
+}
+
+.room-content h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    color: black
+}
+
+.room-description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.025em;
+}
+
+.room-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px
+}
+
+.room-feature {
+    font-size: 12px;
+    color: #374151;
+    letter-spacing: 0.025em;
+}
+
+
+
+
+
+.footer {
+    background-color: #111827;
+    color: white;
+    padding: 5rem 1.5rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3.5rem;
+    margin-bottom: 4rem;
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    font-weight: 200;
+    letter-spacing: 0.15em;
+    margin-bottom: 2rem;
+}
+
+.footer-text {
+    margin-bottom: 2rem;
+    color: #9ca3af;
+    max-width: 28rem;
+    line-height: 1.8;
+    font-weight: 300;
+    letter-spacing: 0.025em;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.social-link {
+    color: #9ca3af;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #fbbf24;
+}
+
+.social-link svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.footer-heading {
+    font-size: 1.125rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+}
+
+.footer-list {
+    list-style: none;
+}
+
+.footer-list li {
+    margin-bottom: 1rem;
+    color: #9ca3af;
+    letter-spacing: 0.025em;
+    font-weight: 300;
+}
+
+.footer-list a {
+    color: #9ca3af;
+    text-decoration: none;
+    letter-spacing: 0.025em;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+.footer-list a:hover {
+    color: #fbbf24;
+}
+
+.footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(55, 65, 81, 0.5);
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.875rem;
+    color: #6b7280;
+    letter-spacing: 0.025em;
+    font-weight: 300;
+}
