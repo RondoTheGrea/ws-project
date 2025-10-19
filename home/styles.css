@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;  /* Offset scroll to account for fixed navbar */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +14,65 @@ body {
     color: #1f2937;
     background-color: #ffffff;
 }
+
+#navbar {
+    padding: 1.5rem 2.5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background-color: rgba(17, 24, 39, 0.75);
+    backdrop-filter: blur(12px);
+} 
+
+.nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;           /* Horizontal layout for logo + text */
+    align-items: center;     /* Center vertically */
+    gap: 0.75rem;           /* Space between logo and text */
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    color: white;
+}
+
+/* Logo image styling */
+.logo-image {
+    height: 40px;           /* Logo height */
+    width: auto;            /* Maintain aspect ratio */
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fbbf24;
+}
+
+.btn-primary {
+    background-color: #f59e0b;
+    color: white;
+    padding: 0.625rem 2rem;
+    border-radius: 9999px;
+}
+
 
 .hero {
     height: 100vh;
@@ -85,7 +149,7 @@ body {
 
 .gallery-items {
     position: relative;
-    height: 20rem;
+    height: 14rem;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.07);
@@ -99,6 +163,65 @@ body {
 
     transition: transform 0.7s ease;
 }
+
+.gallery-items:hover img {
+    transform: scale(1.1);  /* Make image 110% size (zoom in 10%) */
+}
+
+/* The dark overlay that appears on hover */
+.gallery-overlay {
+    position: absolute;  /* Position over the image */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;           /* Cover entire gallery item */
+    
+    /* Gradient from dark bottom to transparent top */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2), transparent);
+    
+    opacity: 0;          /* Invisible by default */
+    transition: opacity 0.5s ease;  /* Smooth fade in/out */
+}
+
+/* When hovering, make overlay visible */
+.gallery-items:hover .gallery-overlay {
+    opacity: 1;  /* Fully visible */
+}
+
+/* The text inside the overlay */
+.gallery-text {
+    position: absolute;  /* Position at bottom of overlay */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;     /* 24px padding inside */
+    color: white;        /* White text */
+    
+    /* Slide up animation */
+    transform: translateY(8px);  /* Start 8px lower */
+    transition: transform 0.5s ease;
+}
+
+/* When hovering, slide text up to original position */
+.gallery-items:hover .gallery-text {
+    transform: translateY(0);  /* Move to normal position */
+}
+
+/* Gallery item heading */
+.gallery-text h3 {
+    font-size: 1.25rem;      /* 20px */
+    font-weight: 300;        /* Light weight */
+    letter-spacing: 0.05em;  /* Slight letter spacing */
+    margin-bottom: 0.25rem;  /* Small space below */
+}
+
+/* Gallery item description */
+.gallery-text p {
+    font-size: 0.875rem;           /* 14px - smaller text */
+    color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+    letter-spacing: 0.05em;
+}
+
 
 
 
@@ -120,7 +243,7 @@ body {
 .about-section{
     height: 100vh;
     padding: 100px 0;
-    background-color: #f9fafb;
+    background-color: rgba(249, 250, 251, 0.7);
 }
 
 .container {
@@ -191,7 +314,6 @@ body {
 
 
 .testimonial-section {
-    height: 100vh;
     padding: 100px;
     display: flex;
     align-items: center;
