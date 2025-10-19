@@ -76,7 +76,7 @@ body {
 
 .hero {
     height: 100vh;
-    background-image: url('../assets/photo-1542314831-068cd1dbfeeb.avif');;
+    background-image: url('assets/photo-1542314831-068cd1dbfeeb.avif');;
     background-size: cover;
     background-position: center;
 
